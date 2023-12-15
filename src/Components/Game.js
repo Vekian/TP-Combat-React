@@ -20,7 +20,7 @@ function App () {
       id: [1,2,3,4],
     };
     let data = JSON.stringify(bodyData);
-     fetch('http://tp-combat-react.dvl.to/player/', 
+     fetch('https://mathieu-combat-react.projets.garage404.com/', 
     {
       body: data,
       headers: {
