@@ -66,6 +66,16 @@ function PlayerCard({player}) {
         setTimeout(() => {idButton.classList.toggle("animationDegatsCard");}, 600)
       }, [player.pv]);
 
+    useEffect(() => {
+        for(let status of player.status) {
+            if (status.type=== "stun" && status.turns > 0){
+                let payload = {
+                    id: player.id,
+                };
+                dispatch(playerPlayed(payload));
+            }
+        }
+    },[player.status])
     
 
         return (

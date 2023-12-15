@@ -423,6 +423,7 @@ function ButtonCapacity({player, attack}) {
                 break;
         }
         }
+        
     function checkTurn(player) {
         if (!(player.isDead) && (player.isAvailable)) {
             return true;

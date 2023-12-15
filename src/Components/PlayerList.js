@@ -175,6 +175,8 @@ function PlayerList(){
     ));
   }
 
+  console.log(players);
+
   return (
     <div>
         <div className='row'>

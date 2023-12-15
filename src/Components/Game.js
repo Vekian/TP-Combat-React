@@ -20,7 +20,7 @@ function App () {
       id: [1,2,3,4],
     };
     let data = JSON.stringify(bodyData);
-     fetch('https://mathieu-combat-react.projets.garage404.com/', 
+     fetch('https://mathieu-combat-react.projets.garage404.com', 
     {
       body: data,
       headers: {

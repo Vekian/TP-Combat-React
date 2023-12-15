@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ProgressBar from './ProgressBar';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeHealthPlayer, hitMonster, changeTarget, displayLastAction, changeStatusMonster, changeDefenseBuff, changeAttackBuff, monsterPlayed } from '../features/fight/fightSlice.js';
+import { changeHealthPlayer, hitMonster, changeTarget, displayLastAction, changeStatus, changeStatusMonster, changeDefenseBuff, changeAttackBuff, monsterPlayed } from '../features/fight/fightSlice.js';
 import { getTarget } from './Functions.js';
 
 function Monster() {
@@ -155,7 +155,7 @@ function Monster() {
       charge1: monster.name + " porte un coup critique et étourdit " + target.name + "pour " + payload.charge1 + " tours"
     }
     dispatch(displayLastAction(payload2));
-    dispatch(changeStatusMonster(payload));
+    dispatch(changeStatus(payload));
   }
 
   function triggerPeste(player){
