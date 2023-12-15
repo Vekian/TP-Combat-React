@@ -1,0 +1,720 @@
+@font-face {
+	font-family: 'southpark';
+	src: url('../../public/font/south\ park.ttf') format('truetype')
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-fire-alt{
+  color: #0044ff;
+}
+
+.fa-heart {
+  color: rgb(255, 0, 0);
+}
+
+.manaShow{
+color: #9fddfa;
+}
+
+.icon-text{
+color: white;
+}
+
+.healShow {
+color: rgb(246, 191, 191);
+}
+.btn{
+padding: 0.1em 0.2rem !important ;
+}
+
+.fa-bomb {
+  color: black;
+}
+
+body {
+  background-color: #232323;
+}
+.selected{
+  background-color: #212121;
+}
+
+.badge-danger {
+position: absolute;
+font-size: 30;
+}
+
+
+
+/*
+-----------------------------
+Animation degats 
+-----------------------------
+*/
+.animationAffichageDesDegats{
+  animation: animationAffichageDesDegats linear 2.5s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: animationAffichageDesDegats linear 2.5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -moz-animation: animationAffichageDesDegats linear 2.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: 50% 50%;
+  -moz-animation-fill-mode:forwards; /*FF 5+*/
+  -o-animation: animationAffichageDesDegats linear 2.5s;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: 50% 50%;
+  -o-animation-fill-mode:forwards; /*Not implemented yet*/
+  -ms-animation: animationAffichageDesDegats linear 2.5s;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: 50% 50%;
+  -ms-animation-fill-mode:forwards; /*IE 10+*/
+}
+
+@keyframes animationAffichageDesDegats{
+  1% {
+    transform:  translate(-23px,7px)  rotate(1deg) scaleX(1.00) scaleY(1.00) ;
+  }
+  12% {
+    transform:  translate(-23px,13px)  rotate(-8deg) scaleX(3.00) scaleY(3.00) ;
+  }
+  18% {
+    transform:  translate(-23px,-7px)  rotate(-12deg) scaleX(5.00) scaleY(5.00) ;
+  }
+  29% {
+    opacity:0.81;
+    transform:  translate(-23px,-54px)  rotate(-20deg) scaleX(1.50) scaleY(1.50) ;
+  }
+  73% {
+    opacity:0.34;
+    transform:  translate(-23px,-125px)  rotate(-60deg) ;
+  }
+  100% {
+      opacity:0;
+    transform:  translate(-23px,-200px)  ;
+  }
+  101% {
+    opacity:0;
+    transform:  translate(-23px,-200px)  rotate(-60deg) scaleX(1.50) scaleY(1.50) ;
+  }
+}
+
+@-moz-keyframes animationAffichageDesDegats{
+  1% {
+    -moz-transform:  translate(-23px,7px)  rotate(1deg) scaleX(1.00) scaleY(1.00) ;
+  }
+  12% {
+    -moz-transform:  translate(-23px,13px)  rotate(-8deg) scaleX(3.00) scaleY(3.00) ;
+  }
+  18% {
+    -moz-transform:  translate(-23px,-7px)  rotate(-12deg) scaleX(5.00) scaleY(5.00) ;
+  }
+  29% {
+    opacity:0.81;
+    -moz-transform:  translate(-23px,-54px)  rotate(-20deg) scaleX(1.50) scaleY(1.50) ;
+  }
+  73% {
+    opacity:0.34;
+    -moz-transform:  translate(-23px,-125px)  rotate(-60deg) ;
+  }
+  100% {
+      opacity:0;
+    -moz-transform:  translate(-23px,-200px)  ;
+  }
+  101% {
+    opacity:0;
+    -moz-transform:  translate(-23px,-200px)  rotate(-60deg) scaleX(1.50) scaleY(1.50) ;
+  }
+}
+
+@-webkit-keyframes animationAffichageDesDegats {
+  1% {
+    -webkit-transform:  translate(-23px,7px)  rotate(1deg) scaleX(1.00) scaleY(1.00) ;
+  }
+  12% {
+    -webkit-transform:  translate(-23px,13px)  rotate(-8deg) scaleX(3.00) scaleY(3.00) ;
+  }
+  18% {
+    -webkit-transform:  translate(-23px,-7px)  rotate(-12deg) scaleX(5.00) scaleY(5.00) ;
+  }
+  29% {
+    opacity:0.81;
+    -webkit-transform:  translate(-23px,-54px)  rotate(-20deg) scaleX(1.50) scaleY(1.50) ;
+  }
+  73% {
+    opacity:0.34;
+    -webkit-transform:  translate(-23px,-125px)  rotate(-60deg) ;
+  }
+  100% {
+      opacity:0;
+    -webkit-transform:  translate(-23px,-200px)  ;
+  }
+  101% {
+    opacity:0;
+    -webkit-transform:  translate(-23px,-200px)  rotate(-60deg) scaleX(1.50) scaleY(1.50) ;
+  }
+}
+
+@-o-keyframes animationAffichageDesDegats {
+  1% {
+    -o-transform:  translate(-23px,7px)  rotate(1deg) scaleX(1.00) scaleY(1.00) ;
+  }
+  12% {
+    -o-transform:  translate(-23px,13px)  rotate(-8deg) scaleX(3.00) scaleY(3.00) ;
+  }
+  18% {
+    -o-transform:  translate(-23px,-7px)  rotate(-12deg) scaleX(5.00) scaleY(5.00) ;
+  }
+  29% {
+    opacity:0.81;
+    -o-transform:  translate(-23px,-54px)  rotate(-20deg) scaleX(1.50) scaleY(1.50) ;
+  }
+  73% {
+    opacity:0.34;
+    -o-transform:  translate(-23px,-125px)  rotate(-60deg) ;
+  }
+  100% {
+      opacity:0;
+    -o-transform:  translate(-23px,-200px)  ;
+  }
+  101% {
+    opacity:0;
+    -o-transform:  translate(-23px,-200px)  rotate(-60deg) scaleX(1.50) scaleY(1.50) ;
+  }
+}
+
+@-ms-keyframes animationAffichageDesDegats {
+  1% {
+    -ms-transform:  translate(-23px,7px)  rotate(1deg) scaleX(1.00) scaleY(1.00) ;
+  }
+  12% {
+    -ms-transform:  translate(-23px,13px)  rotate(-8deg) scaleX(3.00) scaleY(3.00) ;
+  }
+  18% {
+    -ms-transform:  translate(-23px,-7px)  rotate(-12deg) scaleX(5.00) scaleY(5.00) ;
+  }
+  29% {
+    opacity:0.81;
+    -ms-transform:  translate(-23px,-54px)  rotate(-20deg) scaleX(1.50) scaleY(1.50) ;
+  }
+  73% {
+    opacity:0.34;
+    -ms-transform:  translate(-23px,-125px)  rotate(-60deg) ;
+  }
+  100% {
+      opacity:0;
+    -ms-transform:  translate(-23px,-200px)  ;
+  }
+  101% {
+    opacity:0;
+    -ms-transform:  translate(-23px,-200px)  rotate(-60deg) scaleX(1.50) scaleY(1.50) ;
+  }
+}
+
+#degatsMonster, #degatsKyle{
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  right: 2%;
+}
+
+#degatsMonster img, #degatsKyle img{
+  display: inline;
+}
+
+#degatsPlayer{
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  right: 30%;
+  z-index: 10000;
+}
+
+#degatsPlayer img{
+  display: inline;
+}
+
+.centered {
+  position: absolute;
+  top: 12%;
+  left: 49.3%;
+  font-size: 20px;
+  color: white;
+}
+
+.centeredPlayer {
+  position: absolute;
+  top: 12%;
+  left: 25%;
+  font-size: 20px;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+}
+
+/*
+--------------------------
+fin animation degats
+--------------------------
+*/
+
+
+
+
+
+/*
+-------------------------
+animationDegatsCard
+-------------------------
+*/
+.animationDegatsCardMonster{
+    animation: bright-bottom 0.6s ease-in-out both;
+}
+
+@keyframes bright-bottom {
+  10% {
+    filter: brightness(20) drop-shadow(1px 1px 0px rgb(255, 254, 254));
+    transform: translateX(30px);
+  }
+  20%,
+  20%,
+  60% {
+    transform: translateX(-30px);
+    filter: brightness(0) drop-shadow(3px 3px 2px rgb(255, 254, 254));
+  }
+  30%,
+  50%,
+  70% {
+    filter: brightness(60) drop-shadow(5px 5px 3px rgb(255, 254, 254));
+  }
+  80% {
+    filter: brightness(0) drop-shadow(6px 6px 4px rgb(255, 254, 254));
+  }
+}
+
+.animationDegatsCard{
+  animation: red-bottom 0.6s ease-in-out both;
+}
+
+@keyframes red-bottom {
+  10% {
+    filter: brightness(20) drop-shadow(1px 1px 0px rgb(51, 1, 1));
+    transform: translateX(30px);
+  }
+  20%,
+  20%,
+  60% {
+    transform: translateX(-30px);
+    filter: brightness(0) drop-shadow(3px 3px 2px rgb(92, 0, 0));
+  }
+  30%,
+  50%,
+  70% {
+    filter: brightness(60) drop-shadow(5px 5px 3px rgb(87, 0, 0));
+  }
+  80% {
+    filter: brightness(0) drop-shadow(6px 6px 4px rgb(59, 0, 0));
+  }
+}
+
+.animationDegatsCard{
+  animation: bright-bottom 0.6s ease-in-out both;
+}
+
+
+/*
+------------------
+animationHeal
+------------------
+*/
+
+.AnimationHeal{
+background: linear-gradient(175deg, #67db67, #ffffff, #67db67, #ffffff, #67db67, #e0ffe0);
+background-size: 1200% 1200%;
+
+
+-webkit-animation: AnimationHeal 1s ease 1;
+-moz-animation: AnimationHeal 1s ease 1;
+animation: AnimationHeal 1s ease 1;
+}
+
+
+
+@-webkit-keyframes AnimationHeal {
+  0%{background-position:47% 0%}
+  50%{background-position:54% 100%}
+  100%{background-position:47% 0%}
+}
+@-moz-keyframes AnimationHeal {
+  0%{background-position:47% 0%}
+  50%{background-position:54% 100%}
+  100%{background-position:47% 0%}
+}
+@keyframes AnimationHeal { 
+  0%{background-position:47% 0%}
+  50%{background-position:54% 100%}
+  100%{background-position:47% 0%}
+}
+
+
+/*#### Bouton COMBO ####*/
+.btn-combo {
+position: absolute;
+width: 200px;
+top: 50px;
+margin: auto;
+left: 35%;
+height: 85px;
+background-color: #f02c0c !important;
+font-size: 25px;
+font-weight: bold;
+}
+
+.pulse {
+cursor: pointer;
+animation: pulse 1s infinite;
+}
+.pulse:hover {
+animation: none;
+}
+
+@-webkit-keyframes pulse {
+0% {
+  -webkit-box-shadow: 0 0 0 0px rgba(220,20,60, 0.4);
+}
+70% {
+    -webkit-box-shadow: 0 0 0 30px rgba(220,20,60, 0);
+}
+100% {
+    -webkit-box-shadow: 0 0 0 0px rgba(220,20,60, 0);
+}
+}
+@keyframes pulse {
+0% {
+  -moz-box-shadow: 0 0 0 0 rgba(220,20,60, 0.4);
+  box-shadow: 0 0 0 0 rgba(220,20,60, 0.4);
+}
+70% {
+    -moz-box-shadow: 0 0 0 0 rgba(220,20,60, 0);
+    box-shadow: 0 0 0 30px rgba(220,20,60, 0);
+}
+100% {
+    -moz-box-shadow: 0 0 0 0 rgba(220,20,60, 0);
+    box-shadow: 0 0 0 0 rgba(220,20,60, 0);
+}
+}
+/*#### End Bouton COMBO ####*/
+
+.bar-taille {
+width: 65%;
+margin: auto;
+display: block;
+}
+
+.progress-title{
+  font-weight: 700;
+  color: #1c2647;
+  margin: 0 0 10px;
+}
+.progress{
+  background: #fff;
+  border-top: 5px solid #1c2647;
+  border-bottom: 5px solid #1c2647;
+  border-radius: 0 !important;
+  margin-bottom: 5px;
+  overflow: visible;
+  position: relative;
+}
+.progress:before,
+.progress:after{
+  content: "";
+  width: 5px;
+  background: #1c2647;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  bottom: 0;
+}
+.progress:after{
+  left: auto;
+  right: -5px;
+}
+.progress .progress-bar{
+  border: none;
+  box-shadow: none;
+  -webkit-animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+  animation: 2s linear 0s normal none infinite running progress-bar-stripes,animate-positive 1s;
+}
+@-webkit-keyframes animate-positive{
+  0%{ width: 0; }
+}
+@keyframes animate-positive{
+  0%{ width: 0; }
+}
+
+.bg-danger {
+background-color: #ff3547 !important;
+height: 100%;
+}
+
+
+html, body {
+font-family: 'southpark', sans-serif !important;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 95%;
+}
+
+.App {
+  height: 85vh !important;
+}
+
+
+img {
+display: block;
+}
+
+h3 {
+text-align: center;
+font-weight: 400;
+margin-bottom: 0;
+}
+
+body {
+  background-image: url('../../public/img/fond.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.card{
+  border: 0px solid transparent !important;
+  --bs-card-bg: transparent !important;
+}
+
+
+.toolTip{
+  color: rgba(0, 0, 0, 0.5);
+  background: transparent;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.toolTip:before,
+.toolTip:after{
+  content: attr(data-tip);
+  color: #ffffff;
+  background: #000000;
+  font-size: 14px;
+  font-weight: 800;
+  width: 215px;
+  white-space: normal;
+  padding: 13px 10px;
+  border-radius: 20% 50%/50% 20%;
+  box-shadow: 0 0 10px -2px rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+}
+.toolTip:after{
+  content: '';
+  height: 10px;
+  width: 10px;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.toolTip:hover:before,
+.toolTip:hover:after{
+  opacity: 1;
+  visibility: visible;
+}
+.toolTip.top:before,
+.toolTip.top:after{
+  transform: translateX(-50%) rotateY(90deg);
+  position: absolute;
+  bottom: calc(130% - 4px);
+  left: 50%;
+}
+.toolTip.top:after{
+  transform: translateX(-50%) rotate(45deg) rotateY(90deg);
+  bottom: calc(130% - 4px);
+}
+.toolTip.top:hover:before{
+  transform: translateX(-50%) rotateY(0);
+  bottom: 130%;
+}
+.toolTip.top:hover:after{ transform: translateX(-50%) rotate(45deg) rotateY(0); }
+.toolTip.left:before,
+.toolTip.left:after{
+  transform: translateY(-50%) rotateX(90deg);
+  position: absolute;
+  right: calc(140% - 4px);
+  top: 50%;
+}
+
+.btn{
+  color: #fff !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 35px 10px 20px;
+  border: none;
+  border-radius: 0 !important;
+  box-shadow: 6px 6px 0 #000;
+  transform: skewX(-15deg);
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+.capacityDescription {
+  transform: skewX(0) !important; /* Annule la transformation pour le span à l'intérieur du bouton */
+}
+
+.btn:hover {
+  box-shadow: 10px 10px 0 #FBC638;
+}
+
+.capacityValid {
+  background-color: #e25503 !important;
+}
+
+.capacityInvalid {
+  background-color: #bd022c !important;
+}
+
+.resumeActions {
+  overflow-y: scroll;
+  position: absolute;
+  border: 2px solid black;
+  filter: drop-shadow(6px 6px 4px black);
+  background-image: url('../../public/img/Wood.png') ;
+  background-size: contain;
+}
+
+.fa-person-arrow-up-from-line{
+  color: rgb(79, 231, 79);
+}
+
+.fa-skull {
+  color: rgb(170, 4, 211)
+}
+@keyframes jump {
+  0%, 30%, 60%, 90%{
+    transform: translateY(0); /* Pas de saut à ces étapes */
+  }
+  10%, 40%, 70%, 100% {
+    transform: translateY(-20px); /* Saut plus grand vers le haut */
+  }
+}
+
+
+.imgClick {
+  animation: jump 1s ease infinite; /* Appliquer l'animation au survol */
+}
+
+section .card img {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .monsterImg img {
+    height: 200px;
+  }
+  
+  .btn {
+    font-size: 10px !important;
+  }
+  .progress-title{
+    font-size: 12px;
+  }
+  .progress{
+    height: 23px !important;
+  }
+
+  .imgPlayer img {
+    height: 100px;
+  }
+
+  .resumeActions {
+    height: 120px;
+    top : 5%;
+    left: 5%;
+  }
+
+  .card-body {
+    padding: 0 !important;
+  }
+
+  .card, .card-monstre {
+    font-size: 14px !important;
+  }
+
+  h5 {
+    font-size: 15px !important;
+  }
+
+}
+
+  @media screen and (min-width: 1301px) {
+    .monsterImg img {
+      height: 70%;
+    }
+    .progress-title{
+      font-size: 18px;
+    }
+
+    .imgPlayer img {
+      height: 150px;
+    }
+
+    .progress{
+      height: 30px !important;
+    }
+
+    .resumeActions {
+      height: 150px;
+      top : 18%;
+      left: 5%;
+    }
+  }
