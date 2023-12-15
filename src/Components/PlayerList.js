@@ -175,7 +175,6 @@ function PlayerList(){
     ));
   }
 
-  console.log(players);
 
   return (
     <div>
